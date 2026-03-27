@@ -1,0 +1,27 @@
+[user]
+	name = ngxc
+	email = ngoc.shintrann@gmail.com
+	signingkey = C:\\Users\\Admin\\.ssh\\ngxc.pub
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	up = rebase
+	ci = commit
+	pu = push
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
+[gpg]
+	format = ssh
+[init]
+	defaultBranch = main
+[credential]
+	helper = store
+[pull]
+	rebase = true
+[core]
+  excludesfile = C:\\Users\\Admin\\.gitignore_global
+	autocrlf = false
+	eol = lf
