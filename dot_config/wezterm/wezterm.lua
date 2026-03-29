@@ -3,7 +3,7 @@ local act = wezterm.action
 local config = wezterm.config_builder()
 
 -- Timeout: Nếu bấm Ctrl+A xong ngâm 1 giây không bấm gì tiếp theo, nó tự hủy lệnh.
-config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
+config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 2000 }
 -- Dùng PowerShell làm Shell mặc định thay vì CMD rác
 config.default_prog = { 'pwsh.exe', '-NoLogo' }
 config.scrollback_lines = 2000
@@ -51,7 +51,6 @@ config.keys = {
 	{
         key = 'r',
         mods = 'LEADER',
-        name = 'resize_mode',
         action = act.ActivateKeyTable {
             name = 'resize_pane',
             one_shot = false, -- False để không bị văng ra sau 1 lần bấm!
