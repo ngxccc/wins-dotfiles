@@ -5,10 +5,10 @@ vim.keymap.set("n", "<leader>cd", vim.cmd.Ex)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- Alt Up/Down in vscode
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
-vim.keymap.set("n", "J", "mzJ`z")       -- Remap joining lines
+vim.keymap.set("n", "J", "mzJ`z") -- Remap joining lines
 vim.keymap.set("n", "<C-d>", "<C-d>zz") -- Keep cursor in place while moving up/down page
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "n", "nzzzv")       -- center screen when looping search results
+vim.keymap.set("n", "n", "nzzzv") -- center screen when looping search results
 vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "<leader>nh", ":nohlsearch<CR>", { silent = true })
 
@@ -23,8 +23,8 @@ vim.keymap.set("i", "<C-c", "<Esc>")
 vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zz")
 
-vim.keymap.set({"n", "i", "v"}, "<C-s>", "<cmd>w<CR>", { desc = "Save file" })
-vim.keymap.set({"n", "i", "v"}, "<C-q>", "<cmd>q<CR>", { desc = "Quit vim" })
+vim.keymap.set({ "n", "i", "v" }, "<C-s>", "<cmd>w<CR>", { desc = "Save file" })
+vim.keymap.set({ "n", "i", "v" }, "<C-q>", "<cmd>q<CR>", { desc = "Quit vim" })
 
 -- What the heck is Ex mode?
 vim.keymap.set("n", "Q", "<nop>")
@@ -45,8 +45,8 @@ vim.keymap.set("n", "<leader>s", [[:s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- yank into clipboard even if on ssh
-vim.keymap.set('n', '<leader>y', '<Plug>OSCYankOperator')
-vim.keymap.set('v', '<leader>y', '<Plug>OSCYankVisual')
+vim.keymap.set("n", "<leader>y", "<Plug>OSCYankOperator")
+vim.keymap.set("v", "<leader>y", "<Plug>OSCYankVisual")
 
 -- reload without exiting vim
 vim.keymap.set("n", "<leader>rl", "<cmd>source ~/.config/nvim/init.lua<cr>")
@@ -62,7 +62,7 @@ vim.keymap.set("n", "<leader>li", ":checkhealth vim.lsp<CR>", { desc = "LSP Info
 
 -- source file
 vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
+	vim.cmd("so")
 end)
 
 -- buffers

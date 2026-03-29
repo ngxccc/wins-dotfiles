@@ -68,3 +68,26 @@ CenterActiveWindow() {
     ; 5. Nắm đầu ném nó ra giữa
     WinMove(newX, newY, appW, appH, active_id)
 }
+
+; Win + F: Fullscreen cửa sổ đang Active
+#f:: {
+    ; "A" là Active Window
+    active_id := WinGetID("A")
+    
+    ; Đọc bộ quần áo (Style) hiện tại của cửa sổ
+    style := WinGetStyle("ahk_id " active_id)
+    
+    ; 0x00C00000 = WS_CAPTION (Thanh tiêu đề)
+    ; Dùng toán tử AND (&) để check xem nó có đang mặc áo không
+    if (style & 0x00C00000) {
+        ; ĐANG CÓ VIỀN -> Lột viền và Phóng to
+        WinSetStyle("-0x00C00000", "ahk_id " active_id) ; Trừ đi Caption
+        WinSetStyle("-0x00040000", "ahk_id " active_id) ; Trừ đi Sizebox
+        WinMaximize("ahk_id " active_id)
+    } else {
+        ; KHÔNG CÓ VIỀN -> Mặc lại viền và Thu nhỏ về cũ
+        WinSetStyle("+0x00C00000", "ahk_id " active_id)
+        WinSetStyle("+0x00040000", "ahk_id " active_id)
+        WinRestore("ahk_id " active_id)
+    }
+}
