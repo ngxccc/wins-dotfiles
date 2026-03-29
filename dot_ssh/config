@@ -1,0 +1,14 @@
+Host fcngoc
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/fcngoc
+
+Host ngxc
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/ngxc
+    
+Host laptop-arch
+    HostName laptop-ssh.ngxc.io.vn
+    User ngxc
+    ProxyCommand cloudflared access ssh --hostname %h
