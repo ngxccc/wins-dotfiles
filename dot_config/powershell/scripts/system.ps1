@@ -41,7 +41,7 @@ function block-winkey {
             if ($PSCmdlet.ShouldProcess("Registry: $name", "Ghi đè giá trị mới: [$newValue]")) {
                 
                 if (-not (Test-Path $registryPath)) { New-Item -Path $registryPath -Force | Out-Null }
-                Set-ItemProperty -Path $registryPath -Name $name -Value $newValue -PropertyType String -Force
+                Set-ItemProperty -Path $registryPath -Name $name -Value $newValue -Force
                 
                 Write-Host "✅ Đã nạp bộ giáp khóa phím mới: [$newValue]" -ForegroundColor Green
                 
@@ -113,7 +113,7 @@ function unblock-winkey {
                     Remove-ItemProperty -Path $registryPath -Name $name -Force
                     Write-Host "✅ Đã gỡ sạch sẽ toàn bộ lệnh cấm Win+Key! Trả về Default OS." -ForegroundColor Green
                 } else {
-                    Set-ItemProperty -Path $registryPath -Name $name -Value $newValue -PropertyType String -Force
+                    Set-ItemProperty -Path $registryPath -Name $name -Value $newValue -Force
                     Write-Host "✅ Đã mở khóa [$keysToEnable]. Các phím vẫn đang bị cấm: [$newValue]" -ForegroundColor Yellow
                 }
                 
@@ -153,5 +153,67 @@ function set-userenv {
         Set-Item -Path "Env:\$name" -value $value
     } else {
         Write-Host "⚡ Biến $name = $value đã chuẩn chỉ từ trước, bỏ qua I/O!" -ForegroundColor DarkGray
+    }
+}
+
+function block-winlock {
+    <#
+    .SYNOPSIS
+    Phong ấn phím Win + L (Tắt Lock Screen mặc định).
+    
+    .DESCRIPTION
+    Đóng mộc DisableLockWorkstation=1 vào Registry. 
+    Mục đích: Cướp quyền xử lý phím Win + L từ tay Windows để nhường sân khấu cho AutoHotkey hoặc Komorebi.
+    #>
+    [CmdletBinding(SupportsShouldProcess=$true)]
+    param()
+
+    $registryPath = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\System"
+    $name = "DisableLockWorkstation"
+    $value = 1
+
+    # Rào chắn: Nếu folder System chưa có thì tạo mới
+    if (-not (Test-Path $registryPath)) { 
+        New-Item -Path $registryPath -Force | Out-Null 
+    }
+
+    # Đọc giá trị hiện tại để áp dụng tính Lũy đẳng (Idempotent)
+    $currentValue = (Get-ItemProperty -Path $registryPath -Name $name -ErrorAction SilentlyContinue).$name
+
+    # Chỉ ghi đè nếu giá trị chưa chuẩn
+    if ($currentValue -ne $value) {
+        if ($PSCmdlet.ShouldProcess("Registry: $name", "Khóa Win+L (Ép DWord = 1)")) {
+            Set-ItemProperty -Path $registryPath -Name $name -Value $value -Force
+            Write-Host "✅ Đã phong ấn Win+L! AHK giờ là trùm." -ForegroundColor Green
+        }
+    } else {
+        Write-Host "⚡ Win+L đã bị khóa từ trước rồi bro, không cần ghi đè!" -ForegroundColor DarkGray
+    }
+}
+
+function unblock-winlock {
+    <#
+    .SYNOPSIS
+    Mở khóa phím Win + L (Trả lại Lock Screen cho Windows).
+    
+    .DESCRIPTION
+    Dọn rác, xóa bỏ key DisableLockWorkstation trong Registry để OS hoạt động bình thường.
+    #>
+    [CmdletBinding(SupportsShouldProcess=$true)]
+    param()
+
+    $registryPath = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\System"
+    $name = "DisableLockWorkstation"
+
+    $currentValue = (Get-ItemProperty -Path $registryPath -Name $name -ErrorAction SilentlyContinue).$name
+
+    # Check var: Nếu Key có tồn tại thì mới xóa
+    if ($null -ne $currentValue) {
+        if ($PSCmdlet.ShouldProcess("Registry: $name", "Mở khóa Win+L (Tiêu diệt Key)")) {
+            Remove-ItemProperty -Path $registryPath -Name $name -Force
+            Write-Host "✅ Đã trả lại Win+L cho Windows! Bấm thử là khóa máy liền 🔒" -ForegroundColor Cyan
+        }
+    } else {
+        Write-Host "⚡ Cởi chuồng sẵn rồi, Win+L đang hoạt động bình thường!" -ForegroundColor DarkGray
     }
 }

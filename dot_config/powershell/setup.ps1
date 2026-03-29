@@ -125,5 +125,6 @@ if (Test-Path $PROFILE) {
 # Gắn Symlink cho AHK
 if (Test-Path "$HOME\.config\ahk\hotkeys.ahk") {
     make-link -link "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\hotkeys.lnk" -target "$HOME\.config\ahk\hotkeys.ahk"
+	make-link -link "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\komorebi-keys.lnk" -target "$HOME\.config\komorebi\komorebi.ahk"
     Write-Host "      🎹 Đã nạp AutoHotkey vào danh sách Startup." -ForegroundColor Green
 }

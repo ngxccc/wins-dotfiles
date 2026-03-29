@@ -5,3 +5,5 @@ Set-UserEnv -Name "YAZI_CONFIG_HOME" -Value "$HOME\.config\yazi"
 Set-UserEnv -Name "YAZI_FILE_ONE" -Value "$HOME\scoop\apps\git\current\usr\bin\file.exe"
 Set-UserEnv -Name "TERMINAL" -Value "wezterm"
 Set-UserEnv -Name "XDG_CONFIG_HOME" -Value "$HOME\.config"
+Set-UserEnv -Name "KOMOREBI_CONFIG_HOME" -Value "$HOME\.config\komorebi"
+ 
