@@ -1,0 +1,21 @@
+[mgr]
+show_hidden = true
+
+[opener]
+# Định nghĩa 'edit' là hành động gọi lệnh nvim
+edit = [
+    # block = true: Ép Yazi nhường toàn quyền màn hình cho Nvim
+    # %s: Truyền chính xác đường dẫn file đang chọn vào nvim
+    { run = 'nvim %s', block = true, desc = "Mở bằng siêu rồng Neovim" }
+]
+
+[open]
+# Phân luồng rule: Gặp file nào thì xài opener nào
+rules = [
+    # Mọi file có mime-type là text (txt, md, js, ts, json, env...) -> Dùng 'edit' (Nvim)
+    { mime = "text/*", use = "edit" },
+    
+    # Catch-all: Nếu file không rõ định dạng, vẫn cứ tống vào nvim cho chắc ăn
+    { mime = "application/json", use = "edit" },
+    { mime = "inode/x-empty", use = "edit" } # File trắng mới tạo
+]

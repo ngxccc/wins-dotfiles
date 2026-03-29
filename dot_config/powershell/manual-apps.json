@@ -1,0 +1,34 @@
+[
+    {
+        "AppName": "Docker Desktop",
+        "Reason": "Cần config WSL2 Engine ở Kernel level."
+    },
+    {
+        "AppName": "NVIDIA Drivers",
+        "Reason": "Driver phần cứng phải cài từ file .exe trang chủ."
+    },
+    {
+        "AppName": "Zalo",
+        "Reason": "https://zalo.me/pc"
+    },
+	{
+		"AppName": "PowerShell 7",
+        "Reason": "https://github.com/PowerShell/PowerShell"
+	},
+	{
+		"AppName": "Adobe Acrobat",
+        "Reason": "https://taiwebs.com/s/Adobe+Acrobat+Pro+DC"
+	},
+	{
+		"AppName": "HiBit Uninstaller",
+        "Reason": "https://taiwebs.com/s/?s=HiBit+Uninstaller"
+	},
+	{
+		"AppName": "Office",
+        "Reason": "https://github.com/YerongAI/Office-Tool"
+	},
+	{
+		"AppName": "Java(TM) SE Development Kit",
+        "Reason": "https://www.oracle.com/asean/java/technologies/downloads/"
+	}
+]
