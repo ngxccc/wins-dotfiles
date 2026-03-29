@@ -15,95 +15,102 @@
     ],
     "apps": [
         {
-            "Version": "26.00",
+            "Name": "7zip",
             "Source": "main",
             "Updated": "2026-03-27T16:34:22.240611+07:00",
             "Info": "",
-            "Name": "7zip"
+            "Version": "26.00"
         },
         {
-            "Version": "1.67",
+            "Name": "altsnap",
             "Source": "extras",
             "Updated": "2026-03-29T09:33:58.7968231+07:00",
             "Info": "",
-            "Name": "altsnap"
+            "Version": "1.67"
         },
         {
-            "Version": "2.0.22",
+            "Name": "autohotkey",
             "Source": "extras",
             "Updated": "2026-03-29T19:32:02.0748475+07:00",
             "Info": "",
-            "Name": "autohotkey"
+            "Version": "2.0.22"
         },
         {
-            "Version": "1.3.11",
+            "Name": "bottom",
+            "Source": "main",
+            "Updated": "2026-03-29T21:47:14.2671436+07:00",
+            "Info": "",
+            "Version": "0.12.3"
+        },
+        {
+            "Name": "bun",
             "Source": "main",
             "Updated": "2026-03-27T16:36:33.1184258+07:00",
             "Info": "",
-            "Name": "bun"
+            "Version": "1.3.11"
         },
         {
-            "Version": "2.70.0",
+            "Name": "chezmoi",
             "Source": "main",
             "Updated": "2026-03-27T17:20:54.197603+07:00",
             "Info": "",
-            "Name": "chezmoi"
+            "Version": "2.70.0"
         },
         {
-            "Version": "15.2.0",
+            "Name": "gcc",
             "Source": "main",
             "Updated": "2026-03-29T16:14:20.6981198+07:00",
             "Info": "",
-            "Name": "gcc"
+            "Version": "15.2.0"
         },
         {
-            "Version": "2.53.0.2",
+            "Name": "git",
             "Source": "main",
             "Updated": "2026-03-27T16:34:34.999268+07:00",
             "Info": "",
-            "Name": "git"
+            "Version": "2.53.0.2"
         },
         {
-            "Version": "2.26",
+            "Name": "keypirinha",
             "Source": "extras",
             "Updated": "2026-03-29T18:31:31.1712518+07:00",
             "Info": "",
-            "Name": "keypirinha"
+            "Version": "2.26"
         },
         {
-            "Version": "0.1.40",
+            "Name": "komorebi",
             "Source": "extras",
             "Updated": "2026-03-29T19:22:24.9811991+07:00",
             "Info": "",
-            "Name": "komorebi"
+            "Version": "0.1.40"
         },
         {
-            "Version": "0.11.7",
+            "Name": "neovim",
             "Source": "main",
             "Updated": "2026-03-29T09:57:48.3480477+07:00",
             "Info": "",
-            "Name": "neovim"
+            "Version": "0.11.7"
         },
         {
-            "Version": "29.9.2",
+            "Name": "oh-my-posh",
             "Source": "main",
             "Updated": "2026-03-27T17:33:22.299478+07:00",
             "Info": "",
-            "Name": "oh-my-posh"
+            "Version": "29.9.2"
         },
         {
-            "Version": "5.42.0.1",
+            "Name": "perl",
             "Source": "main",
             "Updated": "2026-03-27T16:37:42.8324154+07:00",
             "Info": "",
-            "Name": "perl"
+            "Version": "5.42.0.1"
         },
         {
-            "Version": "26.1.22",
+            "Name": "yazi",
             "Source": "main",
             "Updated": "2026-03-29T08:53:18.415537+07:00",
             "Info": "",
-            "Name": "yazi"
+            "Version": "26.1.22"
         }
     ]
 }
