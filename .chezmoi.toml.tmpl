@@ -1,0 +1,15 @@
+# Hàm promptStringOnce nhận 3 tham số: 
+# (Context gốc, "Tên Biến Lưu Trữ", "Câu hỏi in ra màn hình")
+# Dùng "Once" để nó chỉ hỏi 1 lần duy nhất lúc setup máy mới, các lần apply sau nó sẽ tự lấy value cũ.
+{{- $email := promptStringOnce . "email" "Thả cái địa chỉ Email Github của bro vào đây" }}
+
+[data]
+    osid = {{ .chezmoi.os | quote }}
+    email = {{ $email | quote }}
+
+[git]
+    autoCommit = false
+    autoPush = false
+
+[edit]
+    command = "nvim"

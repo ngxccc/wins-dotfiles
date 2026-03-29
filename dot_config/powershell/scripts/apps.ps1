@@ -87,4 +87,20 @@ function dot-sync {
     }
 }
 
-Set-Alias -Name ds -Value dot-sync
+function cdz {
+	<#
+	.SYNOPSIS
+		Function wrapper để nhảy thẳng vào thư mục source của chezmoi 
+		mà không đẻ thêm tiến trình mới.
+	#>
+    # Gọi chezmoi để lấy đường dẫn gốc (source-path)
+    # Dùng biến cục bộ để code clean và dễ debug
+    $ChezmoiPath = chezmoi source-path
+    
+    # Kiểm tra xem path có tồn tại không trước khi nhảy (Defensive Programming)
+    if (Test-Path $ChezmoiPath) {
+        Set-Location $ChezmoiPath
+    } else {
+        Write-Warning "🚩 Không tìm thấy thư mục source của chezmoi."
+    }
+}
