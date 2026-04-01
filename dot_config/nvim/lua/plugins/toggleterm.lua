@@ -5,7 +5,7 @@ return {
 		"nvim-lua/plenary.nvim",
 		{ -- 🚀 Động cơ V8 cho Telescope
 			"nvim-telescope/telescope-fzf-native.nvim",
-			build = "make", -- Yêu cầu máy bro phải cài gcc/make hoặc cmake
+			build = "cmake", -- Yêu cầu máy bro phải cài gcc/make hoặc cmake
 		},
 	},
 	-- ⚡ LAZY LOADING: Telescope chỉ "tỉnh dậy" khi bro bấm các phím này

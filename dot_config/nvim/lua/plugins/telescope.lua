@@ -1,5 +1,6 @@
 return {
 	"nvim-telescope/telescope.nvim",
+	branch = "master",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 	},
@@ -47,5 +48,6 @@ return {
 		vim.keymap.set("n", "<leader>fi", function()
 			builtin.find_files({ cwd = "~/.config/nvim/" })
 		end)
+		vim.keymap.set("n", "<leader>fw", builtin.live_grep, { desc = "Find Word in Workspace (Live Grep)" })
 	end,
 }

@@ -19,8 +19,8 @@ return {
 
 				-- UI chanh sả, có viền cong giống VS Code
 				window = {
-					completion = cmp.config.window.bordered({ border = "curved" }),
-					documentation = cmp.config.window.bordered({ border = "curved" }),
+					completion = cmp.config.window.bordered({ border = "rounded" }),
+					documentation = cmp.config.window.bordered({ border = "rounded" }),
 				},
 
 				mapping = cmp.mapping.preset.insert({
