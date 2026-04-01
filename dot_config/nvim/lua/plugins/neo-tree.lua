@@ -6,6 +6,12 @@ return {
 		"nvim-tree/nvim-web-devicons", -- Material icons đẹp
 		"MunifTanjim/nui.nvim",
 	},
+	keys = {
+		{ "<leader>e", "<cmd>Neotree toggle<cr>", desc = "Toggle Neo-tree (Root Dir)" },
+		{ "<leader>E", "<cmd>Neotree toggle reveal<cr>", desc = "Reveal file in Neo-tree" },
+		{ "<leader>ge", "<cmd>Neotree float git_status<cr>", desc = "Git status" },
+		{ "<leader>be", "<cmd>Neotree toggle buffers<cr>", desc = "Buffer list" },
+	},
 	config = function()
 		-- Setup nvim-web-devicons với theme đẹp
 		require("nvim-web-devicons").setup({
@@ -34,7 +40,7 @@ return {
 					expander_highlight = "NeoTreeExpander",
 				},
 				icon = {
-					folder_closed = "",
+					folder_closed = "",
 					folder_open = "",
 					folder_empty = "",
 					default = "*",
@@ -171,32 +177,5 @@ return {
 				},
 			},
 		})
-
-		-- Keymaps
-		vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Toggle Neo-tree", silent = true })
-		vim.keymap.set("n", "<leader>o", ":Neotree focus<CR>", { desc = "Focus Neo-tree", silent = true })
-
-		-- Mở Neo-tree ở thư mục hiện tại
-		vim.keymap.set(
-			"n",
-			"<leader>E",
-			":Neotree toggle reveal<CR>",
-			{ desc = "Reveal current file in Neo-tree", silent = true }
-		)
-
-		-- Git status
-		vim.keymap.set("n", "<leader>ge", ":Neotree float git_status<CR>", { desc = "Git status", silent = true })
-
-		-- Buffers
-		vim.keymap.set("n", "<leader>be", ":Neotree toggle buffers<CR>", { desc = "Buffer list", silent = true })
-
-		-- Chuyển qua lại giữa Neo-tree và file
-		vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left window", silent = true })
-		vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right window", silent = true })
-		vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to bottom window", silent = true })
-		vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to top window", silent = true })
-
-		-- Hoặc dùng Ctrl+w+w để cycle giữa các windows
-		vim.keymap.set("n", "<Tab>", "<C-w>w", { desc = "Cycle through windows", silent = true })
 	end,
 }

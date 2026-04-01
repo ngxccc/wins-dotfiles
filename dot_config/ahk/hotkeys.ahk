@@ -35,3 +35,27 @@ GetTerminal() {
 }
 
 #+l::DllCall("user32.dll\LockWorkStation")
+
+#c::CenterActiveWindow()
+
+CenterActiveWindow() {
+    ; 1. Lấy mã định danh (HWND) của app em vừa mở từ Keypirinha
+    active_id := WinGetID("A")
+    if !active_id
+        return
+
+    ; 2. Lấy chiều dài (W), chiều cao (H) của cái app đó
+    WinGetPos(&appX, &appY, &appW, &appH, active_id)
+
+    ; 3. Lấy kích thước của Màn hình (Đã trừ đi cái Taskbar bên dưới)
+    MonitorGetWorkArea(1, &screenLeft, &screenTop, &screenRight, &screenBottom)
+    screenWidth := screenRight - screenLeft
+    screenHeight := screenBottom - screenTop
+
+    ; 4. Thuật toán căn giữa siêu kinh điển
+    newX := screenLeft + (screenWidth - appW) / 2
+    newY := screenTop + (screenHeight - appH) / 2
+
+    ; 5. Nắm đầu ném nó ra giữa
+    WinMove(newX, newY, appW, appH, active_id)
+}

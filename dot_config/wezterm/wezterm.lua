@@ -40,7 +40,7 @@ config.keys = {
 	},
 
 	-- 🏃‍♂️ ĐIỀU HƯỚNG BẰNG NEOVIM STYLE (H J K L)
-	-- Bấm Leader + h/j/k/l để nhảy sang các Pane tương ứng
+	-- Bấm Alt + h/j/k/l để nhảy sang các Pane tương ứng
 	{ key = "h", mods = "ALT", action = act.ActivatePaneDirection("Left") },
 	{ key = "j", mods = "ALT", action = act.ActivatePaneDirection("Down") },
 	{ key = "k", mods = "ALT", action = act.ActivatePaneDirection("Up") },

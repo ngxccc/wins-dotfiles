@@ -46,7 +46,8 @@ Komorebic(cmd) {
 
 ; Manipulate windows
 #+t::Komorebic("toggle-float") ; Thả trôi không ép lưới
-#f::Komorebic("toggle-monocle") ; Phóng to tràn viền (Giống Fullscreen)
+#f::Komorebic("toggle-monocle") ; Phóng to nội bộ lưới (vẫn hiện Bar)
+#Enter::Komorebic("toggle-maximize") ; Đè lên bar
 
 ; Window manager options
 #+r::Komorebic("retile")

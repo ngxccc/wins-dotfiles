@@ -1,38 +1,55 @@
 {
-    "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/master/schema.json",
-    "app_specific_configuration_path": "$Env:USERPROFILE/.config/komorebi/applications.json",
-    "cross_monitor_move_behaviour": "Insert",
-    "default_workspace_padding": 15,
-    "default_container_padding": 10,
-    "border": true,
-    "border_width": 2,
-    "border_colours": {
-        "single": "#4C566A",
-        "stack": "#A3BE8C",
-        "monocle": "#EBCB8B",
-        "unfocused": "#2E3440"
-    },
-    "animation": {
-        "enabled": true,
-        "duration": 150,
-        "fps": 60,
-        "style": "EaseOutExpo"
-    },
-	"float_rules": [
-        { "kind": "Class", "id": "#32770", "matching_strategy": "Equals" }
-    ],
-    "manage_rules": [
-        { "kind": "Exe", "id": "wezterm-gui.exe", "matching_strategy": "Equals" }
-    ],
-    "monitors": [
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/master/schema.json",
+  "app_specific_configuration_path": "$Env:USERPROFILE/.config/komorebi/applications.json",
+  "cross_monitor_move_behaviour": "Insert",
+  "default_workspace_padding": 2,
+  "default_container_padding": 2,
+  "window_hiding_behaviour": "Cloak",
+  "alt_focus_hack": true,
+  "mouse_follows_focus": true,
+
+  "border": true,
+  "border_width": 2,
+  "border_colours": {
+    "single": "#4C566A",
+    "stack": "#A3BE8C",
+    "monocle": "#EBCB8B",
+    "unfocused": "#2E3440"
+  },
+  "animation": {
+    "enabled": true,
+    "duration": 150,
+    "fps": 60,
+    "style": "EaseOutExpo"
+  },
+  "monitors": [
+    {
+      "workspaces": [
         {
-            "workspaces": [
-                { "name": "1-Code", "layout": "BSP" },
-                { "name": "2-Web", "layout": "BSP" },
-                { "name": "3-Chat", "layout": "Columns" },
-                { "name": "4-DB", "layout": "BSP" },
-                { "name": "5", "layout": "BSP" }
-            ]
+          "name": "1",
+          "layout": "BSP"
+        },
+        {
+          "name": "2",
+          "layout": "BSP"
+        },
+        {
+          "name": "3",
+          "layout": "BSP"
+        },
+        {
+          "name": "4",
+          "layout": "BSP"
+        },
+        {
+          "name": "5",
+          "layout": "BSP"
+        },
+        {
+          "name": "6",
+          "layout": "BSP"
         }
-    ]
+      ]
+    }
+  ]
 }

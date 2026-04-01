@@ -1,8 +1,9 @@
 {
     "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/master/schema.bar.json",
     "monitor": 0,
+    "height": 32, 
     "font_family": "JetBrains Mono",
-    "font_size": 14,
+    "font_size": 12,
     "theme": {
         "palette": "Base16",
         "name": "HorizonDark",
@@ -12,8 +13,8 @@
     "padding": {
         "left": 10,
         "right": 10,
-        "top": 5,
-        "bottom": 5
+        "top": 0,
+        "bottom": 0
     },
     "left_widgets": [
         {
@@ -40,21 +41,15 @@
     ],
     "right_widgets": [
         {
-            "Cpu": {
-                "enable": true
-            }
+            "Cpu": { "enable": true }
         },
         {
-            "Memory": {
-                "enable": true
-            }
+            "Memory": { "enable": true }
         },
         {
             "Time": {
                 "enable": true,
-                "format": {
-                    "Custom": "%H:%M - %d/%m/%Y"
-                }
+                "format": { "Custom": "%H:%M - %d/%m/%Y" } 
             }
         }
     ]
