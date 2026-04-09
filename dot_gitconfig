@@ -25,3 +25,5 @@
   excludesfile = C:\\Users\\Admin\\.gitignore_global
 	autocrlf = false
 	eol = lf
+[fetch]
+	prune = true
