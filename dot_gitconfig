@@ -9,6 +9,9 @@
 	up = rebase
 	ci = commit
 	pu = push
+	s = status --short
+	d = diff
+	ds = diff --staged
 [commit]
 	gpgsign = true
 [tag]
@@ -27,3 +30,7 @@
 	eol = lf
 [fetch]
 	prune = true
+[pager]
+	diff = false
+[difftool]
+	prompt = false
