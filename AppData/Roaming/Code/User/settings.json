@@ -542,45 +542,31 @@
   // SKIP KEY
   "vim.handleKeys": {
     "<C-a>": false,
-    "<C-c>": false,
+    // "<C-c>": false,
     "<C-f>": false,
     "<C-w>": false,
-   "<C-p>": false,
+    "<C-p>": false,
     "<C-k>": false
   },
 
   // KEYBINDINGS
   "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "j"],
-      "after": ["<Esc>"]
-    }
+    { "before": ["<C-c>"], "after": ["<Esc>"] },
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
-    { "before": ["H"], "after": ["^"] }, // di chuyen den ky tu dau dong
-    { "before": ["L"], "after": ["$"] }, // di chuyen den ky tu cuoi dong
+    { "before": ["H"], "after": ["^"] }, // move to start line
+    { "before": ["L"], "after": ["$"] }, // move to end line
     { "before": ["<leader>", "d"], "after": ["d", "d"] },
     { "before": ["<C-n>"], "commands": [":nohl"] },
-    {
-      "before": ["K"],
-      "commands": ["lineBreakInsert"],
-      "silent": true
-    },
-    {
-      "before": ["<leader>", "a"],
-      "after": ["g", "g", "V", "G"]
-    }
+    { "before": ["<leader>", "o"], "after": ["o", "<Esc>"] },
+    { "before": ["<leader>", "O"], "after": ["O", "<Esc>"] },
+    { "before": ["<leader>", "a"], "after": ["g", "g", "V", "G"] },
+    { "before": ["K"], "commands": ["editor.action.showHover"] },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
-    {
-      "before": [">"],
-      "after": [">", "g", "v"]
-    },
-    {
-      "before": ["<"],
-      "after": ["<", "g", "v"]
-    },
+    { "before": [">"], "after": [">", "g", "v"] },
+    { "before": ["<"], "after": ["<", "g", "v"] },
     { "before": ["H"], "after": ["^"] },
-    { "before": ["L"], "after": ["$"] }
+    { "before": ["L"], "after": ["$", "h"] }
   ],
 }
