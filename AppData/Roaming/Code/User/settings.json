@@ -1,8 +1,10 @@
 {
+  // #region Others
   "telemetry.telemetryLevel": "off",
   "diffEditor.ignoreTrimWhitespace": true,
+  // #endregion
 
-  //NOTE: Editor
+  // #region Editor
   "editor.guides.bracketPairs": true,
   "editor.linkedEditing": true,
   "editor.stickyScroll.enabled": false,
@@ -50,8 +52,9 @@
     },
     "textMateRules": []
   },
+  // #endregion
 
-  //NOTE: Workbench
+  // #region Workbench
   "workbench.colorTheme": "Dracula Theme",
   "workbench.preferredDarkColorTheme": "Dracula Theme",
   "workbench.iconTheme": "material-icon-theme",
@@ -92,44 +95,53 @@
     "*.copilotmd": "vscode.markdown.preview.editor",
     "*.pdf": "latex-workshop-pdf-hook"
   },
+  // #endregion
 
-  //NOTE: Extensions
+  // #region Extensions
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
   },
+  // #endregion
 
-  //NOTE: GitHub Copilot
+  // #region GitHub Copilot
   "github.copilot.enable": {
     "*": false,
     "plaintext": false,
     "markdown": false,
     "scminput": false
   },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  // #endregion
 
-  //NOTE: React Snippets
+  // #region React Snippets
   "reactSnippets.settings.importReactOnTop": false,
+  // #endregion
 
-  //NOTE: LiveServer
+  // #region LiveServer
   "liveServer.settings.donotShowInfoMsg": true,
   "liveServer.settings.donotVerifyTags": true,
+  // #endregion
 
-  //NOTE: Emmet
+  // #region Emmet
   "emmet.preferences": {
     "emmet.includeLanguages": {
       "javascript": "javascriptreact"
     },
     "emmet.triggerExpansionOnTab": true
   },
+  // #endregion
 
-  //NOTE: Auto Close Tag
+  // #region Auto Close Tag
   "auto-close-tag.activationOnLanguage": [
     "mdx"
   ],
+  // #endregion
 
-  //NOTE: Material icon theme
+  // #region Material icon theme
   "material-icon-theme.hidesExplorerArrows": true,
+  // #endregion
 
-  //NOTE: Files
+  // #region Files
   "files.exclude": {
     "**/.git": false
   },
@@ -141,40 +153,47 @@
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "files.eol": "\n",
+  // #endregion
 
-  //NOTE: Explorer
+  // #region Explorer
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.compactFolders": false,
+  // #endregion
 
-  //NOTE: Git
+  // #region Git
   "git.openRepositoryInParentFolders": "always",
   "git.autofetch": true,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
+  // #endregion
 
-  //NOTE: Path Intellisense
+  // #region Path Intellisense
   "path-intellisense.autoSlashAfterDirectory": true,
   "path-intellisense.autoTriggerNextSuggestion": true,
   "path-intellisense.ignoreTsConfigBaseUrl": true,
   "path-intellisense.showHiddenFiles": true,
+  // #endregion
 
-  //NOTE: Window
+  // #region Window
   "window.autoDetectColorScheme": true,
+  // #endregion
 
-  //NOTE: Terminal
+  // #region Terminal
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.enableMultiLinePasteWarning": "never",
+  // #endregion
 
-  //NOTE: HTML
+  // #region HTML
   "html.format.wrapLineLength": 0,
   "html.format.contentUnformatted": "pre,code,textarea",
   "html.format.maxPreserveNewLines": 1,
   "html.format.preserveNewLines": true,
   "html.format.wrapAttributes": "force-expand-multiline",
+  // #endregion
 
-  //NOTE: Pretitier / Format
+  // #region Pretitier / Format
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -244,16 +263,18 @@
     "editor.formatOnSave": true,
     "editor.tabSize": 4
   },
+  // #endregion
 
-  //NOTE: CSpell
+  // #region CSpell
   "cSpell.userWords": [],
   "cSpell.ignoreWords": [],
   "cSpell.language": "en,vi",
   "cSpell.enabledFileTypes": {
     "markdown": false
   },
+  // #endregion
 
-  //NOTE: Better Comments
+  // #region Better Comments
   "better-comments.tags": [
     {
       "tag": "TODO:",
@@ -280,7 +301,7 @@
       "backgroundColor": "transparent"
     },
     {
-      "tag": "NOTE:",
+      "tag": " #region",
       "color": "#2563EB",
       "strikethrough": false,
       "backgroundColor": "transparent"
@@ -310,25 +331,30 @@
       "backgroundColor": "transparent"
     }
   ],
+  // #endregion
 
-  //NOTE: Security
+  // #region Security
   "security.workspace.trust.untrustedFiles": "open",
+  // #endregion
 
-  //NOTE: C/C++
+  // #region C/C++
   "C_Cpp.default.compilerPath": "C:\\msys64\\ucrt64\\bin\\gcc.exe",
   "C_Cpp.autocompleteAddParentheses": true,
   "C_Cpp.formatting": "clangFormat",
   "C_Cpp.default.includePath": [
     "C:/Program Files/emsdk/upstream/emscripten/system/include"
   ],
+  // #endregion
 
-  //NOTE: CodeSnap
+  // #region CodeSnap
   "codesnap.target": "window",
+  // #endregion
 
-  //NOTE: JavaScript / TypeScript
+  // #region JavaScript / TypeScript
   // "js/ts.updateImportsOnFileMove.enabled": "prompt",
+  // #endregion
 
-  //NOTE: Tailwindcss
+  // #region Tailwindcss
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.includeLanguages": {
     "html": "html",
@@ -336,8 +362,9 @@
     "css": "css"
   },
   "tailwindCSS.experimental.configFile": null,
+  // #endregion
 
-  //NOTE: Markdown
+  // #region Markdown
   "markdownlint.config": {
     "default": true,
     "MD033": false,
@@ -345,11 +372,26 @@
     "MD060": false,
     "MD056": false,
   },
+  // #endregion
 
-  //NOTE: Json
+  // #region Json
   "json.schemaDownload.enable": true,
+  "json.schemaDownload.trustedDomains": {
+    "https://aka.ms": true,
+    "https://developer.microsoft.com/json-schemas/": true,
+    "https://json-schema.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://raw.githubusercontent.com/devcontainers/spec/": true,
+    "https://raw.githubusercontent.com/microsoft/vscode/": true,
+    "https://schemastore.azurewebsites.net/": true,
+    "https://turborepo.dev": true,
+    "https://ui.shadcn.com": true,
+    "https://www.schemastore.org/": true
+  },
+  // #endregion
 
-  //NOTE: Chat
+  // #region Chat
   "chat.viewSessions.orientation": "stacked",
   "chat.mcp.serverSampling": {},
   "chat.mcp.discovery.enabled": {
@@ -358,12 +400,13 @@
     "cursor-global": true,
     "cursor-workspace": true
   },
+  // #endregion
 
-  //NOTE: DotENV
+  // #region DotENV
   "dotenv.enableAutocloaking": false,
-  "github.copilot.nextEditSuggestions.enabled": true,
+  // #endregion
 
-  //NOTE: PHP
+  // #region PHP
   "php.format.codeStyle": "Laravel",
   "php.inlayHints.insertOnDoubleClick": false,
   "php.format.rules.booleanConstantCasing": "lowercase",
@@ -377,18 +420,22 @@
   "php.format.rules.openBraceOnNewLineForTypes": false,
   "php.format.rules.keepFunctionsOnOneLine": true,
   "php.format.rules.spaceBeforeColonInControlStatements": false,
+  // #endregion
 
-  //NOTE: SQLTools
+  // #region SQLTools
   "sqltools.connections": [],
   "sqltools.useNodeRuntime": false,
+  "sqltools.format": {
+    "linesBetweenQueries": 2,
+    "reservedWordCase": "upper",
+  },
+  // #endregion
 
-  //NOTE: SQL Formatter
-  "sql-formatter.uppercase": true,
-
-  //NOTE: Prettier SQL
+  // #region Prettier SQL
   "Prettier-SQL.keywordCase": "upper",
+  // #endregion
 
-  //NOTE: PHP
+  // #region PHP
   "php.inlayHints.types.return": false,
   "php.format.rules.importSorting": "alphabetic",
   "php.format.rules.callParametersNewLineAfterLeftParen": true,
@@ -397,8 +444,9 @@
   "php.format.rules.arrayInitializersNewLineBeforeFirstElement": true,
   "php.format.rules.arrayInitializersNewLineAfterLastElement": true,
   "php.format.rules.arrayInitializersWrap": "onEveryItem",
+  // #endregion
 
-  //NOTE: MSSQL
+  // #region MSSQL
   "mssql.connectionGroups": [
     {
       "name": "ROOT",
@@ -425,20 +473,24 @@
   "mssql.autoDisableNonTSqlLanguageService": true,
   "mssql.format.datatypeCasing": "uppercase",
   "mssql.format.keywordCasing": "uppercase",
+  // #endregion
 
-  //NOTE: Black Formatter
+  // #region Black Formatter
   "black-formatter.importStrategy": "fromEnvironment",
+  // #endregion
 
-  //NOTE: Pylance
+  // #region Pylance
   "python.analysis.autoFormatStrings": true,
   "python.analysis.autoImportCompletions": true,
+  // #endregion
 
-  //NOTE: C# & .NET
+  // #region C# & .NET
   "csharpextensions.useFileScopedNamespace": true,
   "dotnet.codeLens.enableReferencesCodeLens": false,
   "dotnet.formatting.organizeImportsOnFormat": true,
+  // #endregion
 
-  //NOTE: LaTex Workshop
+  // #region LaTex Workshop
   "latex-workshop.latex.autoBuild.run": "never",
   "latex-workshop.latex.outDir": "%DIR%/build",
   "latex-workshop.latex.tools": [
@@ -476,22 +528,9 @@
       "tools": ["latexmk-clean"]
     }
   ],
+  // #endregion
 
-  "json.schemaDownload.trustedDomains": {
-    "https://aka.ms": true,
-    "https://developer.microsoft.com/json-schemas/": true,
-    "https://json-schema.org/": true,
-    "https://json.schemastore.org/": true,
-    "https://raw.githubusercontent.com/": true,
-    "https://raw.githubusercontent.com/devcontainers/spec/": true,
-    "https://raw.githubusercontent.com/microsoft/vscode/": true,
-    "https://schemastore.azurewebsites.net/": true,
-    "https://turborepo.dev": true,
-    "https://ui.shadcn.com": true,
-    "https://www.schemastore.org/": true
-  },
-
-  //NOTE: File Tree to Text Generator
+  // #region File Tree to Text Generator
   "tree-generator.exclude": {
     "**/.agents/**": true,
     "**/.git/**": true,
@@ -510,8 +549,9 @@
     "**/obj/**": true,
   },
   "tree-generator.defaultDepth": 10,
+  // #endregion
 
-  //NOTE: Rust
+  // #region Rust
   "rust-analyzer.inlayHints.chainingHints.enable": true,
   "rust-analyzer.inlayHints.closingBraceHints.enable": false,
   "rust-analyzer.inlayHints.genericParameterHints.const.enable": false,
@@ -528,8 +568,9 @@
   ],
   "rust-analyzer.cargo.features": "all",
   "rust-analyzer.workspace.symbol.search.scope": "workspace",
+  // #endregion
 
-  // NOTE: Vim
+  // #region Vim
   "vim.leader": "<space>",
   "vim.ignorecase": true,
   "vim.smartcase": true,
@@ -538,6 +579,10 @@
   "vim.useSystemClipboard": true,
   "vim.easymotion": true,
   "vim.useCtrlKeys": true,
+  // "vim.statusBarColorControl": true,
+  // "vim.statusBarColors.normal": ["#8FBCBB", "#434C5E"],
+  // "vim.statusBarColors.insert": ["#BF616A", "#ECEFF4"],
+  // "vim.statusBarColors.visual": ["#B48EAD", "#ECEFF4"],
 
   // SKIP KEY
   "vim.handleKeys": {
@@ -557,11 +602,14 @@
     { "before": ["H"], "after": ["^"] }, // move to start line
     { "before": ["L"], "after": ["$"] }, // move to end line
     { "before": ["<leader>", "d"], "after": ["d", "d"] },
-    { "before": ["<C-n>"], "commands": [":nohl"] },
+    { "before": ["<leader>", "n", "h"], "commands": [":nohl"] },
     { "before": ["<leader>", "o"], "after": ["o", "<Esc>"] },
     { "before": ["<leader>", "O"], "after": ["O", "<Esc>"] },
     { "before": ["<leader>", "a"], "after": ["g", "g", "V", "G"] },
     { "before": ["K"], "commands": ["editor.action.showHover"] },
+    // { "before": ["<A-j>"], "commands": ["editor.action.moveLinesDownAction"] },
+    // { "before": ["<A-k>"], "commands": ["editor.action.moveLinesUpAction"] },
+    { "before": ["g", "i"], "commands": ["editor.action.goToImplementation"] }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     { "before": [">"], "after": [">", "g", "v"] },
@@ -569,4 +617,5 @@
     { "before": ["H"], "after": ["^"] },
     { "before": ["L"], "after": ["$", "h"] }
   ],
+  // #endregion
 }
